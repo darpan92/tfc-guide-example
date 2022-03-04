@@ -15,7 +15,7 @@ provider "aws" {
 }
 
 module "webserver" {
-  source = "../../../../Terraform/modules/aws-s4-server"
+  source = "../../../../modules/aws-s4-server"
   provider_region = var.provider_region
   instance_name = var.instance_name
   ami_id = var.ami_id
