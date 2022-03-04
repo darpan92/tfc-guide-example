@@ -15,7 +15,7 @@ provider "aws" {
 }
 
 module "webserver" {
-  source = "github.com/tfc-guide-example/modules/aws-s4-server"
+  source = "github.com/darpan92/tfc-guide-example/tree/master/modules/aws-s4-server"
   provider_region = var.provider_region
   instance_name = var.instance_name
   ami_id = var.ami_id
