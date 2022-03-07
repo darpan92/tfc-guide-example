@@ -13,6 +13,6 @@ provider "aws" {
 }
 
 module "s4-server" {
-  source = "../../Darpan_AWS/modules"
+  source = "github.com/darpan92/tfc-guide-example/modules"
   instance_name = var.instance_name
 }
