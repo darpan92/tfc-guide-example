@@ -9,7 +9,7 @@ terraform {
 
 resource "aws_instance" "web" { 
   count = 4
-  ami = "ami-0c293f3f676ec4f90"
+  ami = "ami-0e1d30f2c40c4c701"
   instance_type = "t2.micro"
 }
 
