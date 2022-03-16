@@ -7,3 +7,8 @@ variable "instance_name"{
 	type = string
         default = "Test"
 }
+
+variable "instance_type"{
+	type = string
+        default = "t.2micro"
+}
