@@ -15,4 +15,5 @@ provider "aws" {
 module "s4-server" {
   source = "github.com/darpan92/tfc-guide-example/modules"
   instance_name = var.instance_name
+  instance_type = var.instance_type
 }
