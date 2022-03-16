@@ -10,5 +10,5 @@ variable "instance_name"{
 
 variable "instance_type"{
 	type = string
-        default = "t.2micro"
+        default = "t2.micro"
 }
