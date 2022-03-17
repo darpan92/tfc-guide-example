@@ -1,0 +1,21 @@
+{
+	"provider_region" : "us-east-1",
+	"resources" : [{
+		"instance_name" : "Test1",
+		"instance_type" : "t2.micro",
+		"ami" : "ami-0c02fb55956c7d316",
+		"id" : "i-046da0b1fb1797ebf"
+	},
+	{
+		"instance_name" : "Test2",
+		"instance_type" : "t2.small",
+		"ami" : "ami-0c02fb55956c7d316",
+		"id" : "i-0cf5ae528a64a0387"
+	},
+	{
+		"instance_name" : "Test3",
+		"instance_type" : "t2.micro",
+		"ami" : "ami-0c02fb55956c7d316",
+		"id" : "i-04494c8584629de53"
+	}]
+}
