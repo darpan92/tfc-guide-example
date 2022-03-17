@@ -5,15 +5,28 @@ terraform {
       version = "4.4.0"
     }
   }
+  cloud {
+    organization = "DarpanTest"
+    workspaces {
+      name = "Terraform-Test"
+    }
+  }
+}
+
+locals {
+  resource_data = jsondecode(file("../terraform/resources.json"))
 }
 
 provider "aws" {
   # Configuration options
-  region = var.provider_region
+  region = local.resource_data.provider_region
 }
 
 module "s4-server" {
+  for_each = "${{for r in local.resource_data.resources : r.instance_name => r}}"
   source = "github.com/darpan92/tfc-guide-example/modules"
-  instance_name = var.instance_name
-  instance_type = var.instance_type
+  provider_region = local.resource_data.provider_region
+  instance_name = each.value.instance_name
+  ami = each.value.ami
+  instance_type = each.value.instance_type
 }
