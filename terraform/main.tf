@@ -14,7 +14,7 @@ terraform {
 }
 
 locals {
-  resource_data = jsondecode(file("../terraform/resources.json"))
+  resource_data = jsondecode(file("../terraform/resources/resources.json"))
 }
 
 provider "aws" {
