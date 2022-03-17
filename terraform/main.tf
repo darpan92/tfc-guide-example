@@ -5,12 +5,6 @@ terraform {
       version = "4.4.0"
     }
   }
-  cloud {
-    organization = "DarpanTest"
-    workspaces {
-      name = "Terraform-Test"
-    }
-  }
 }
 
 locals {
