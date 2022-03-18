@@ -2,11 +2,19 @@ variable "provider_region"{
 	type = string
 }
 
-variable "instance_name"{
+variable "app_instance_name"{
 	type = string
 }
 
-variable "instance_type"{
+variable "app_instance_type"{
+	type = string
+}
+
+variable "db_instance_name"{
+	type = string
+}
+
+variable "db_instance_type"{
 	type = string
 }
 
