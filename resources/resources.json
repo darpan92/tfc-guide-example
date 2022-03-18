@@ -8,7 +8,7 @@
 	},
 	{
 		"instance_name" : "Test2",
-		"instance_type" : "t2.small",
+		"instance_type" : "t2.micro",
 		"ami" : "ami-0c02fb55956c7d316",
 		"id" : "i-0cf5ae528a64a0387"
 	},
