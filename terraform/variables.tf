@@ -1,14 +1,28 @@
 variable "provider_region"{
 	type = string
-        default = "us-east-1"
+	default = ""
 }
 
-variable "instance_name"{
+variable "app_instance_name"{
 	type = string
-        default = "Test"
+	default = ""
 }
 
-variable "instance_type"{
+variable "app_instance_type"{
 	type = string
-        default = "t2.micro"
+	default = ""
+}
+
+variable "db_instance_name"{
+	type = string
+	default = ""
+}
+
+variable "db_instance_type"{
+	type = string
+	default = ""
+}
+variable "ami"{
+	type = string
+	default = ""
 }
