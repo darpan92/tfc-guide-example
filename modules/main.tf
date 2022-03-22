@@ -12,19 +12,19 @@ locals {
 }
 
 resource "aws_instance" "app" { 
-  for_each = "${{for r in local.resource_data.resources : r.app_instance_name => r}}" 
+  for_each = "${{for r in local.resource_data.resources : try(r.app_instance_name, "") => r if try(r.app_instance_name, "") != ""}}" 
   ami = each.value.ami
-  instance_type = each.value.app_instance_type
+  instance_type = try(each.value.app_instance_type, "")
   tags = {
-    Name = each.value.app_instance_name
+    Name = try(each.value.app_instance_name, "")
   }
 }
 
 resource "aws_instance" "db" {
-  for_each = "${{for r in local.resource_data.resources : r.db_instance_name => r}}"
+  for_each = "${{for r in local.resource_data.resources : try(r.db_instance_name, "") => r if try(r.db_instance_name, "") != ""}}"
   ami = each.value.ami
-  instance_type = each.value.db_instance_type
+  instance_type = try(each.value.db_instance_type, "")
   tags = {
-    Name = each.value.db_instance_name
+    Name = try(each.value.db_instance_name, "")
   }
 } 
