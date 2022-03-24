@@ -11,7 +11,7 @@
 	},
 	{
 		"app_instance_name" : "Test2",
-		"app_instance_type" : "t2.micro",
+		"app_instance_type" : "t2.small",
 		"db_instance_name" : "DB2",
         "db_instance_type" : "t2.micro",
 		"ami" : "ami-0c02fb55956c7d316",
