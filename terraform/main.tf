@@ -19,13 +19,13 @@ locals {
 
 provider "aws" {
   # Configuration options
-  region = local.resource_data.provider_region
+  region = local.resource_data.region
 }
 
 module "s4-server" {
   #for_each = "${{for r in local.resource_data.resources : r.app_instance_name => r}}"
   source = "github.com/darpan92/tfc-guide-example/modules"
-  provider_region = local.resource_data.provider_region
+  provider_region = local.resource_data.region
   app_instance_name = var.app_instance_name
   ami = var.ami
   app_instance_type = var.app_instance_type
